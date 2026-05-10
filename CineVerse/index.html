@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CineVerse - Movie Search App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="bg-layer"></div>
+
+ <!-- 🔥 Navbar -->
+<nav class="navbar">
+  <h1>🎬 CineVerse</h1>
+
+  <div class="filters">
+    <select id="industryFilter">
+      <option value="">All</option>
+      <option value="bollywood">Bollywood</option>
+      <option value="hollywood">Hollywood</option>
+    </select>
+
+    <select id="typeFilter">
+      <option value="">All</option>
+      <option value="movie">Movies</option>
+      <option value="series">Series</option>
+    </select>
+
+    <input type="number" id="yearFilter" placeholder="Year" />
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Unlimited Movies, TV Shows & More</h1>
+    <p>Search and explore your favorite movies instantly.</p>
+    <button class="hero-btn">Explore Now</button>
+  </div>
+</section>
+
+<!-- 🔍 Search Section -->
+<div class="search-section">
+  <div class="search-container">
+    <span class="search-icon">🔍</span>
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search movies..."
+    />
+  </div>
+</div>
+
+  <!-- ⏳ Loading -->
+  <p id="loading" class="hidden">Loading...</p>
+
+  <!-- ❌ Error -->
+  <p id="error"></p>
+  <h2 class="section-title">🔥 Trending Movies</h2>
+ <div id="trending" class="movie-grid"></div>
+ <h2 class="section-title">🔍 Search Results</h2>
+ <div id="movies" class="movie-grid"></div>
+
+  <!-- 🎥 Movies -->
+  <div id="movieModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <div id="modalDetails"></div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
